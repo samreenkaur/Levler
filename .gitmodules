@@ -1,0 +1,3 @@
+[submodule "DynamicCellHeight"]
+	path = DynamicCellHeight
+	url = https://github.com/DonMag/DynamicCellHeight.git

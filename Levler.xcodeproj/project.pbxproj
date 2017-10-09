@@ -7,11 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22AC14E4CB05E599A9E5228E /* Pods_Levler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DFE943F884BAFB207CB2A4B /* Pods_Levler.framework */; };
 		7113EBD91F6F9EEE005D1E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113EBD81F6F9EEE005D1E96 /* AppDelegate.swift */; };
 		7113EBDB1F6F9EEF005D1E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7113EBDA1F6F9EEF005D1E96 /* ViewController.swift */; };
 		7113EBDE1F6F9EEF005D1E96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7113EBDC1F6F9EEF005D1E96 /* Main.storyboard */; };
 		7113EBE01F6F9EEF005D1E96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7113EBDF1F6F9EEF005D1E96 /* Assets.xcassets */; };
 		7113EBE31F6F9EEF005D1E96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7113EBE11F6F9EEF005D1E96 /* LaunchScreen.storyboard */; };
+		719DFBB31F713B270038F06A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBB21F713B260038F06A /* HomeViewController.swift */; };
+		719DFBB51F7380FB0038F06A /* TextProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBB41F7380FB0038F06A /* TextProperties.swift */; };
+		719DFBB71F73A1A30038F06A /* HomeReivewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBB61F73A1A30038F06A /* HomeReivewTableViewCell.swift */; };
+		719DFBB91F73B4950038F06A /* SendInviteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBB81F73B4950038F06A /* SendInviteViewController.swift */; };
+		719DFBBB1F73E6040038F06A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBBA1F73E6040038F06A /* MenuViewController.swift */; };
+		719DFBC51F73FB980038F06A /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBC41F73FB980038F06A /* ReviewViewController.swift */; };
+		719DFBCD1F7A67920038F06A /* GoogleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBCC1F7A67920038F06A /* GoogleTableViewController.swift */; };
+		719DFBCF1F7A69550038F06A /* FacebookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBCE1F7A69550038F06A /* FacebookTableViewController.swift */; };
+		719DFBD11F7A796A0038F06A /* GoogleReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBD01F7A796A0038F06A /* GoogleReviewTableViewCell.swift */; };
+		719DFBD31F7A79870038F06A /* FacebookReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBD21F7A79870038F06A /* FacebookReviewTableViewCell.swift */; };
+		719DFBD71F7CB8470038F06A /* SentDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBD61F7CB8470038F06A /* SentDetailTableViewCell.swift */; };
+		719DFBD91F7CDABB0038F06A /* SentInviteDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBD81F7CDABB0038F06A /* SentInviteDetailsTableViewController.swift */; };
+		719DFBDB1F7CEA750038F06A /* PoliciesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 719DFBDA1F7CEA740038F06A /* PoliciesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +36,22 @@
 		7113EBDF1F6F9EEF005D1E96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7113EBE21F6F9EEF005D1E96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7113EBE41F6F9EEF005D1E96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		719DFBB21F713B260038F06A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		719DFBB41F7380FB0038F06A /* TextProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextProperties.swift; sourceTree = "<group>"; };
+		719DFBB61F73A1A30038F06A /* HomeReivewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeReivewTableViewCell.swift; sourceTree = "<group>"; };
+		719DFBB81F73B4950038F06A /* SendInviteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendInviteViewController.swift; sourceTree = "<group>"; };
+		719DFBBA1F73E6040038F06A /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		719DFBC41F73FB980038F06A /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		719DFBCC1F7A67920038F06A /* GoogleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleTableViewController.swift; sourceTree = "<group>"; };
+		719DFBCE1F7A69550038F06A /* FacebookTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookTableViewController.swift; sourceTree = "<group>"; };
+		719DFBD01F7A796A0038F06A /* GoogleReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleReviewTableViewCell.swift; sourceTree = "<group>"; };
+		719DFBD21F7A79870038F06A /* FacebookReviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookReviewTableViewCell.swift; sourceTree = "<group>"; };
+		719DFBD61F7CB8470038F06A /* SentDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentDetailTableViewCell.swift; sourceTree = "<group>"; };
+		719DFBD81F7CDABB0038F06A /* SentInviteDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentInviteDetailsTableViewController.swift; sourceTree = "<group>"; };
+		719DFBDA1F7CEA740038F06A /* PoliciesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliciesViewController.swift; sourceTree = "<group>"; };
+		7DFE943F884BAFB207CB2A4B /* Pods_Levler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Levler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6277B9255AC014D3D9E15A3 /* Pods-Levler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Levler/Pods-Levler.debug.xcconfig"; sourceTree = "<group>"; };
+		A68FD31C0C3DA2CE6795C397 /* Pods-Levler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Levler.release.xcconfig"; path = "Pods/Target Support Files/Pods-Levler/Pods-Levler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AC14E4CB05E599A9E5228E /* Pods_Levler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B86CBD79AB7509D79864878 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DFE943F884BAFB207CB2A4B /* Pods_Levler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7113EBCC1F6F9EEE005D1E96 = {
 			isa = PBXGroup;
 			children = (
 				7113EBD71F6F9EEE005D1E96 /* Levler */,
 				7113EBD61F6F9EEE005D1E96 /* Products */,
+				F44B0E5268A4ED272F5BB787 /* Pods */,
+				5B86CBD79AB7509D79864878 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +95,68 @@
 		7113EBD71F6F9EEE005D1E96 /* Levler */ = {
 			isa = PBXGroup;
 			children = (
+				719DFBBF1F73EAFB0038F06A /* Networking */,
+				719DFBBE1F73EAE60038F06A /* Properties */,
+				719DFBBD1F73E9850038F06A /* Controllers */,
+				719DFBBC1F73E9240038F06A /* Views */,
 				7113EBD81F6F9EEE005D1E96 /* AppDelegate.swift */,
-				7113EBDA1F6F9EEF005D1E96 /* ViewController.swift */,
 				7113EBDC1F6F9EEF005D1E96 /* Main.storyboard */,
 				7113EBDF1F6F9EEF005D1E96 /* Assets.xcassets */,
 				7113EBE11F6F9EEF005D1E96 /* LaunchScreen.storyboard */,
 				7113EBE41F6F9EEF005D1E96 /* Info.plist */,
 			);
 			path = Levler;
+			sourceTree = "<group>";
+		};
+		719DFBBC1F73E9240038F06A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				719DFBB61F73A1A30038F06A /* HomeReivewTableViewCell.swift */,
+				719DFBD01F7A796A0038F06A /* GoogleReviewTableViewCell.swift */,
+				719DFBD21F7A79870038F06A /* FacebookReviewTableViewCell.swift */,
+				719DFBD61F7CB8470038F06A /* SentDetailTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		719DFBBD1F73E9850038F06A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7113EBDA1F6F9EEF005D1E96 /* ViewController.swift */,
+				719DFBB21F713B260038F06A /* HomeViewController.swift */,
+				719DFBBA1F73E6040038F06A /* MenuViewController.swift */,
+				719DFBB81F73B4950038F06A /* SendInviteViewController.swift */,
+				719DFBC41F73FB980038F06A /* ReviewViewController.swift */,
+				719DFBCC1F7A67920038F06A /* GoogleTableViewController.swift */,
+				719DFBCE1F7A69550038F06A /* FacebookTableViewController.swift */,
+				719DFBD81F7CDABB0038F06A /* SentInviteDetailsTableViewController.swift */,
+				719DFBDA1F7CEA740038F06A /* PoliciesViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		719DFBBE1F73EAE60038F06A /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				719DFBB41F7380FB0038F06A /* TextProperties.swift */,
+			);
+			name = Properties;
+			sourceTree = "<group>";
+		};
+		719DFBBF1F73EAFB0038F06A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		F44B0E5268A4ED272F5BB787 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6277B9255AC014D3D9E15A3 /* Pods-Levler.debug.xcconfig */,
+				A68FD31C0C3DA2CE6795C397 /* Pods-Levler.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7113EBE71F6F9EEF005D1E96 /* Build configuration list for PBXNativeTarget "Levler" */;
 			buildPhases = (
+				103166D1309DE2A76249CF97 /* [CP] Check Pods Manifest.lock */,
 				7113EBD11F6F9EEE005D1E96 /* Sources */,
 				7113EBD21F6F9EEE005D1E96 /* Frameworks */,
 				7113EBD31F6F9EEE005D1E96 /* Resources */,
+				A91FACA3EA48EFEC619F3394 /* [CP] Embed Pods Frameworks */,
+				532C21D7A9DBBB54DF4120B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,13 +230,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		103166D1309DE2A76249CF97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Levler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		532C21D7A9DBBB54DF4120B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levler/Pods-Levler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A91FACA3EA48EFEC619F3394 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Levler/Pods-Levler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Levler/Pods-Levler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7113EBD11F6F9EEE005D1E96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719DFBD31F7A79870038F06A /* FacebookReviewTableViewCell.swift in Sources */,
+				719DFBD11F7A796A0038F06A /* GoogleReviewTableViewCell.swift in Sources */,
+				719DFBD71F7CB8470038F06A /* SentDetailTableViewCell.swift in Sources */,
+				719DFBB71F73A1A30038F06A /* HomeReivewTableViewCell.swift in Sources */,
+				719DFBC51F73FB980038F06A /* ReviewViewController.swift in Sources */,
+				719DFBCF1F7A69550038F06A /* FacebookTableViewController.swift in Sources */,
+				719DFBB91F73B4950038F06A /* SendInviteViewController.swift in Sources */,
+				719DFBB51F7380FB0038F06A /* TextProperties.swift in Sources */,
+				719DFBCD1F7A67920038F06A /* GoogleTableViewController.swift in Sources */,
+				719DFBBB1F73E6040038F06A /* MenuViewController.swift in Sources */,
 				7113EBDB1F6F9EEF005D1E96 /* ViewController.swift in Sources */,
 				7113EBD91F6F9EEE005D1E96 /* AppDelegate.swift in Sources */,
+				719DFBD91F7CDABB0038F06A /* SentInviteDetailsTableViewController.swift in Sources */,
+				719DFBDB1F7CEA750038F06A /* PoliciesViewController.swift in Sources */,
+				719DFBB31F713B270038F06A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -250,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -261,10 +426,12 @@
 		};
 		7113EBE81F6F9EEF005D1E96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6277B9255AC014D3D9E15A3 /* Pods-Levler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QB23TXMHVV;
 				INFOPLIST_FILE = Levler/Info.plist;
+				"LD_MAP_FILE_PATH[arch=*]" = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.levler.Levler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,10 +441,12 @@
 		};
 		7113EBE91F6F9EEF005D1E96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68FD31C0C3DA2CE6795C397 /* Pods-Levler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QB23TXMHVV;
 				INFOPLIST_FILE = Levler/Info.plist;
+				"LD_MAP_FILE_PATH[arch=*]" = "$(TARGET_TEMP_DIR)/$(PRODUCT_NAME)-LinkMap-$(CURRENT_VARIANT)-$(CURRENT_ARCH).txt";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.levler.Levler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -304,6 +473,7 @@
 				7113EBE91F6F9EEF005D1E96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,6 +16,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let token = UserDefaults.standard.object(forKey: "token")
+        print("TOKEN: \(token)")
+        //setting the name to label
+       /* if token != nil {
+            print("TRIGGER")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController: UIViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let navController: UINavigationController = UINavigationController(rootViewController: homeViewController)
+            UINavigationBar.appearance().tintColor = UIColor.white
+            UINavigationBar.appearance().barStyle = .black
+            UINavigationBar.appearance().backgroundColor = UIColor.black
+            UIApplication.shared.keyWindow?.rootViewController = navController
+            window?.rootViewController?.dismiss(animated: false, completion: nil)
+            //homeViewController.view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+        }
+        */
+        var a = true
+         if token != nil
+         {  a = true
+            
+         }
+        else
+         {
+             a = false
+        }
+        let isLoggedIn: Bool? = a // Get From user defaults
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+        if isLoggedIn! {
+            let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+            let navController: UINavigationController = UINavigationController(rootViewController: homeViewController)
+            self.window?.rootViewController = navController
+            UINavigationBar.appearance().tintColor = UIColor.white
+            UINavigationBar.appearance().barStyle = .black
+            UINavigationBar.appearance().backgroundColor = UIColor.black
+        }
+        else {
+             let loginViewController = storyboard.instantiateViewController(withIdentifier: "viewController") as! ViewController
+            self.window?.rootViewController = loginViewController
+        }
         return true
     }
 
