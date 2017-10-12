@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let token = UserDefaults.standard.object(forKey: "token")
-        print("TOKEN: \(token)")
+        print("TOKEN: \(String(describing: token))")
         //setting the name to label
        /* if token != nil {
             print("TRIGGER")

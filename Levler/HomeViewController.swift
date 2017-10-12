@@ -457,91 +457,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         case .success:
             
             //print(response.result.value as Any)
-            let json: NSDictionary? = response.result.value as? NSDictionary
-            let jsonArray:NSArray = (json!["message"] as? NSArray)!
-            
-            if jsonArray.count > 5
-            {
-                print("5")
-            for element in jsonArray.prefix(5) {
-                let jsonData = element as! NSDictionary
-                //getting user values
-                let name = jsonData.value(forKey: "name") as! String
-                let rating = jsonData.value(forKey: "rating") as! Int
-                let des: String? = jsonData.value(forKey: "comment") as? String
-                let src = jsonData.value(forKey: "src") as! String
-                let img = UIImage(named: "001-search")!
-                let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!, image: img,  description:des)
-                self.treview.append(reviews)
-                self.tableView.reloadData()
-
-                }
-            }
-                
-                else
-                {
-                    print("not 5")
-                    for element in jsonArray {
-                        
-                        let jsonData = element as! NSDictionary
-                        //getting user values
-                        let name = jsonData.value(forKey: "name") as! String
-                        let rating = jsonData.value(forKey: "rating") as! Int
-                        let des: String? = jsonData.value(forKey: "comment") as? String
-                        let src = jsonData.value(forKey: "src") as! String
-                        let img = UIImage(named: "001-search")!
-
-                        let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!,image: img, description:des)
-                        self.treview.append(reviews)
-                        print("google")
-                        self.tableView.reloadData()
-
-                        }
-                    self.showActivityIndicator()
-
-                    request("https://app.levler.co/api/v1/employe/facebook_reviews", method: .get, parameters: nil , encoding: JSONEncoding.default, headers: (Auth_header as? HTTPHeaders)).responseJSON { response1 in
-                        print("All reviews - Fb reviews: \(response1.result)")
-                        self.hideActivityIndicator()
-
-                        print(5-jsonArray.count)
-                            //print(response.result.value as Any)
-                            let json1: NSDictionary? = response1.result.value as? NSDictionary
-                            let jsonArray1 = json1!["message"] as! NSArray
-                           
-                                for element1 in jsonArray1.prefix(5-jsonArray.count) {
-                                    let jsonData1 = element1 as! NSDictionary
-                                    //getting user values
-                                    let name = jsonData1.value(forKey: "name") as! String
-                                    let rating = jsonData1.value(forKey: "rating") as! Int
-                                    let des: String? = jsonData1.value(forKey: "comment") as? String
-                                    let src = jsonData1.value(forKey: "src") as! String
-                                    let img = UIImage(named: "003-facebook")!
-
-                                    let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!,image: img , description:des)
-                                    self.treview.append(reviews)
-                                    print(reviews)
-                                    print("fb")
-                                    self.tableView.reloadData()
-                                    }
-                            }
-                    }
-            self.tableView.reloadData()
-            
-        
-        case .failure:
-            //self.noData()
-            self.showActivityIndicator()
-            
-            request("https://app.levler.co/api/v1/employe/facebook_reviews", method: .get, parameters: nil , encoding: JSONEncoding.default, headers: (Auth_header as? HTTPHeaders)).responseJSON { response1 in
-                print("All reviews - Fb reviews: \(response1.result)")
-                self.hideActivityIndicator()
-                switch response1.result {
-                case .success:
-                    
-                    //print(response.result.value as Any)
-                    let json: NSDictionary? = response1.result.value as? NSDictionary
-                    let jsonArray:NSArray = (json!["message"] as? NSArray)!
-                    
+            if let json: NSDictionary = response.result.value as? NSDictionary
+          {
+                   if let jsonArray:NSArray = (json["message"] as? NSArray)
+                   {
+                        if jsonArray.count > 5
+                        {
+                            print("5")
                         for element in jsonArray.prefix(5) {
                             let jsonData = element as! NSDictionary
                             //getting user values
@@ -549,12 +471,184 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                             let rating = jsonData.value(forKey: "rating") as! Int
                             let des: String? = jsonData.value(forKey: "comment") as? String
                             let src = jsonData.value(forKey: "src") as! String
-                            let img = UIImage(named: "003-facebook")!
+                            let img = UIImage(named: "001-search")!
                             let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!, image: img,  description:des)
                             self.treview.append(reviews)
                             self.tableView.reloadData()
+
+                            }
                         }
-                    self.tableView.reloadData()
+                
+                        else
+                        {
+                                print("not 5")
+                                for element in jsonArray {
+                                        
+                                        let jsonData = element as! NSDictionary
+                                        //getting user values
+                                        let name = jsonData.value(forKey: "name") as! String
+                                        let rating = jsonData.value(forKey: "rating") as! Int
+                                        let des: String? = jsonData.value(forKey: "comment") as? String
+                                        let src = jsonData.value(forKey: "src") as! String
+                                        let img = UIImage(named: "001-search")!
+
+                                        let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!,image: img, description:des)
+                                        self.treview.append(reviews)
+                                        print("google")
+                                        self.tableView.reloadData()
+
+                                        }
+                                    self.showActivityIndicator()
+
+                                    request("https://app.levler.co/api/v1/employe/facebook_reviews", method: .get, parameters: nil , encoding: JSONEncoding.default, headers: (Auth_header as? HTTPHeaders)).responseJSON { response1 in
+                                        print("All reviews - Fb reviews: \(response1.result)")
+                                        self.hideActivityIndicator()
+
+                                        print(5-jsonArray.count)
+                                            //print(response.result.value as Any)
+                                        if let json1: NSDictionary = response1.result.value as? NSDictionary
+                                           {
+                                            
+                                                    if let jsonArray1 : NSArray = json1["message"] as? NSArray
+                                                   {
+                                                    for element1 in (jsonArray1.prefix(5-jsonArray.count)) {
+                                                            let jsonData1 = element1 as! NSDictionary
+                                                            //getting user values
+                                                            let name = jsonData1.value(forKey: "name") as! String
+                                                            let rating = jsonData1.value(forKey: "rating") as! Int
+                                                            let des: String? = jsonData1.value(forKey: "comment") as? String
+                                                            let src = jsonData1.value(forKey: "src") as! String
+                                                            let img = UIImage(named: "003-facebook")!
+
+                                                            let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!,image: img , description:des)
+                                                            self.treview.append(reviews)
+                                                            print(reviews)
+                                                            print("fb")
+                                                            self.tableView.reloadData()
+                                                            }
+                                                    }
+                                                    else if (json1["message"] as? String) != nil
+                                                   {
+                                                    print("1")
+                                                     self.noData()
+                                                    }
+                                                    else if (json["message"]) == nil{
+                                                        print("1.2")
+                                                        self.noData()
+                                            }
+                                            }
+                                        else
+                                        {
+                                            print("2")
+                                            self.noData()
+                                        }
+                                }
+                            }
+                            self.tableView.reloadData()
+                            }
+                            else
+                          {
+                            
+                            print("3")
+                            // self.noData()
+                            self.showActivityIndicator()
+                            
+                            request("https://app.levler.co/api/v1/employe/facebook_reviews", method: .get, parameters: nil , encoding: JSONEncoding.default, headers: (Auth_header as? HTTPHeaders)).responseJSON { response1 in
+                                print("All reviews - not google, only Fb reviews: \(response1.result)")
+                                self.hideActivityIndicator()
+                                switch response1.result {
+                                case .success:
+                                    
+                                    //print(response.result.value as Any)
+                                    if let json: NSDictionary = response1.result.value as? NSDictionary
+                                    {
+                                        if let jsonArray:NSArray = (json["message"] as? NSArray)
+                                        {
+                                            for element in jsonArray.prefix(5) {
+                                                let jsonData = element as! NSDictionary
+                                                //getting user values
+                                                let name = jsonData.value(forKey: "name") as! String
+                                                let rating = jsonData.value(forKey: "rating") as! Int
+                                                let des: String? = jsonData.value(forKey: "comment") as? String
+                                                let src = jsonData.value(forKey: "src") as! String
+                                                let img = UIImage(named: "003-facebook")!
+                                                let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!, image: img,  description:des)
+                                                self.treview.append(reviews)
+                                                self.tableView.reloadData()
+                                            }
+                                            self.tableView.reloadData()
+                                        }
+                                        else if (json["message"] as? String) != nil{
+                                            print("5.1")
+                                            self.noData()
+                                        }
+                                        else if (json["message"]) == nil{
+                                            print("6.1")
+                                            self.noData()
+                                        }
+                                    }
+                                    else
+                                    {
+                                        print("7.1")
+                                        self.noData()
+                                    }
+                                case .failure:
+                                    print("error")
+                                    self.noData()
+                                }
+                                
+                            }
+                            
+                            }
+                }
+            else{
+                print("4")
+                self.noData()
+            }
+            
+        case .failure:
+            //self.noData()
+            self.showActivityIndicator()
+            
+            request("https://app.levler.co/api/v1/employe/facebook_reviews", method: .get, parameters: nil , encoding: JSONEncoding.default, headers: (Auth_header as? HTTPHeaders)).responseJSON { response1 in
+                print("All reviews - only Fb reviews: \(response1.result)")
+                self.hideActivityIndicator()
+                switch response1.result {
+                case .success:
+                    
+                    //print(response.result.value as Any)
+                    if let json: NSDictionary = response1.result.value as? NSDictionary
+                  {
+                            if let jsonArray:NSArray = (json["message"] as? NSArray)
+                          {
+                                for element in jsonArray.prefix(5) {
+                                    let jsonData = element as! NSDictionary
+                                    //getting user values
+                                    let name = jsonData.value(forKey: "name") as! String
+                                    let rating = jsonData.value(forKey: "rating") as! Int
+                                    let des: String? = jsonData.value(forKey: "comment") as? String
+                                    let src = jsonData.value(forKey: "src") as! String
+                                    let img = UIImage(named: "003-facebook")!
+                                    let reviews = TotalReview(name: name, rating: rating, imageURL: NSURL(string:src)!, image: img,  description:des)
+                                    self.treview.append(reviews)
+                                    self.tableView.reloadData()
+                                }
+                            self.tableView.reloadData()
+                            }
+                            else if (json["message"] as? String) != nil{
+                                print("5")
+                            self.noData()
+                            }
+                            else if (json["message"]) == nil{
+                                print("6")
+                                self.noData()
+                            }
+                    }
+                    else
+                  {
+                    print("7")
+                    self.noData()
+                    }
                 case .failure:
                     print("error")
                     self.noData()

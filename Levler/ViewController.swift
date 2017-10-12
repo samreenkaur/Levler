@@ -86,24 +86,13 @@ class ViewController: UIViewController {
         
     }
     override func viewDidLoad() {
-        //self.loginSuccess()
-        
-      /*     let token = UserDefaults.standard.object(forKey: "token")
-        print("TOKEN:\(token ?? 0)")
-         //setting the name to label
-         if token != nil {
-         print("TRIGGER")
-         let homeViewController: UIViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-         let navController: UINavigationController = UINavigationController(rootViewController: homeViewController)
-         UIApplication.shared.keyWindow?.rootViewController = navController
-         dismiss(animated: false, completion: nil)
-         }*/
+       
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
          iconClick = true
-        emailTF.underlined()
-        passwordTF.underlined()
+       // emailTF.underlined()
+       // passwordTF.underlined()
         messageLabel.isHidden = true
 
         UITextField.appearance().tintColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0)

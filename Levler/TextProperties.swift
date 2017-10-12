@@ -8,18 +8,56 @@
 
 import Foundation
 import UIKit
-
+private var maxLengths = [UITextField: Int]()
 extension UITextField {
     
-    func underlined(){
+    @IBInspectable var maxLength: Int {
+        get {
+            guard let l = maxLengths[self] else {
+                return 150 // (global default-limit. or just, Int.max)
+            }
+            return l
+        }
+        set {
+            maxLengths[self] = newValue
+            addTarget(self, action: #selector(fix), for: .editingChanged)
+        }
+    }
+    func fix(textField: UITextField) {
+        let t = textField.text
+        textField.text = t?.safelyLimitedTo(length: maxLength)
+    }
+}
+
+extension String
+{
+    func safelyLimitedTo(length n: Int)->String {
+        let c = self.characters
+        if (c.count <= n) { return self }
+        return String( Array(c).prefix(upTo: n) )
+    }
+    
+
+  /*  func underlined(){
         let border = CALayer()
         let width = CGFloat(1.0)
         border.borderColor = UIColor.lightGray.cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
         border.borderWidth = width
+      //  border.borderColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0).cgColor
         self.layer.addSublayer(border)
         self.layer.masksToBounds = true
     }
+    func underlinedColor(){
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = UIColor.lightGray.cgColor
+        border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
+        border.borderWidth = width
+        border.borderColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0).cgColor
+        self.layer.addSublayer(border)
+        self.layer.masksToBounds = true
+    }*/
 }
 
 extension UIScrollView {
@@ -46,7 +84,7 @@ extension UIViewController {
 
 
 
-class MaxLengthTextField: UITextField, UITextFieldDelegate {
+/*class MaxLengthTextField: UITextField, UITextFieldDelegate {
     
     private var characterLimit: Int?
     
@@ -88,7 +126,7 @@ class MaxLengthTextField: UITextField, UITextFieldDelegate {
     
 }
 
-
+*/
 extension Date {
     
     func getElapsedInterval() -> String {
