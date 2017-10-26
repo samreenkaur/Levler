@@ -95,7 +95,7 @@ class ViewController: UIViewController {
        // passwordTF.underlined()
         messageLabel.isHidden = true
 
-        UITextField.appearance().tintColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0)
+        UITextField.appearance().tintColor = UIColor(red: 38/255, green: 183/255, blue: 91/255, alpha: 1.0)
         
 
         self.hideKeyboardWhenTappedAround()

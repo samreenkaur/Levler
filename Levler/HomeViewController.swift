@@ -307,7 +307,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                     self.goal_description.text = "You have achieved your goal"
                     self.goal_finalLabel.text = "😍"
                     self.progress_tracklabel.text = "You're on track!"
-                    self.progress_tracklabel.textColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0)
+                    self.progress_tracklabel.textColor = UIColor(red: 38/255, green: 183/255, blue: 91/255, alpha: 1.0)
                     
                     self.progress_catchuplabel.text = " Enjoy your achievement 🎖"
                 }

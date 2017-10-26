@@ -18,7 +18,7 @@ class SendInviteViewController: UIViewController, CountryPickerDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var locationName: UILabel!
     
-    @IBOutlet weak var doePickerButton: UIButton!
+   // @IBOutlet weak var doePickerButton: UIButton!
     
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var picker: CountryPicker!
@@ -27,7 +27,7 @@ class SendInviteViewController: UIViewController, CountryPickerDelegate {
     var isOpen = false
     var codeLabel = ""
     
-    @IBAction func donePicker(_ sender: Any) {
+  /*  @IBAction func donePicker(_ sender: Any) {
         codeLabel = countryCodeBt.currentTitle!
         let codeup = codeLabel.split(separator: "▴", maxSplits: 2, omittingEmptySubsequences: true)
        // print("codeup:")
@@ -41,49 +41,69 @@ class SendInviteViewController: UIViewController, CountryPickerDelegate {
         isOpen = false
         customerName.isUserInteractionEnabled = true
         customerContact.isUserInteractionEnabled = true
-    }
+    }*/
     @IBAction func countryCodeButton(_ sender: Any) {
-        
+        countryCodeVisibility()
+       
+    }
+    
+    @IBAction func nameTF(_ sender: Any) {
+        picker.isHidden = true
+        isOpen = true
+        sendButton.isHidden = false
+        countryCodeVisibility()
+    }
+    
+    @IBAction func contactTF(_ sender: Any) {
+        picker.isHidden = true
+        isOpen = true
+        sendButton.isHidden = false
+        countryCodeVisibility()
+    }
+    func countryCodeVisibility(){
         if (!isOpen)
         {
             codeLabel = countryCodeBt.currentTitle!
             let codedown = codeLabel.split(separator: "▾", maxSplits: 2, omittingEmptySubsequences: true)
-           // print("coddown:")
-           // print(codedown)
-           // print(codedown[0])
-
-            countryCodeBt.setTitle("\(codedown[0])▴", for: .normal)
-            customerName.isUserInteractionEnabled = false
-        customerContact.isUserInteractionEnabled = false
+            let codeup = codedown[0].split(separator: "▴", maxSplits: 2, omittingEmptySubsequences: true)
+            let codelabel = codeup[0]
+            // print("coddown:")
+            // print(codedown)
+            // print(codedown[0])
+            
+            countryCodeBt.setTitle("\(codelabel)▴", for: .normal)
+            //  customerName.isUserInteractionEnabled = false
+            // customerContact.isUserInteractionEnabled = false
             isOpen = true
-            doePickerButton.isHidden = false
+            //  doePickerButton.isHidden = false
             picker.isHidden = false
-            sendButton.isHidden = true
-        let locale = Locale.current
-        let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
-        //init Picker
-        picker.countryPickerDelegate = self
-        picker.showPhoneNumbers = true
-        picker.setCountry(code!)
+            //sendButton.isHidden = true
+            let locale = Locale.current
+            let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
+            //init Picker
+            picker.countryPickerDelegate = self
+            picker.showPhoneNumbers = true
+            picker.setCountry(code!)
             
         }
         else if isOpen {
             codeLabel = countryCodeBt.currentTitle!
             let codeup = codeLabel.split(separator: "▴", maxSplits: 2, omittingEmptySubsequences: true)
+           let codedown = codeup[0].split(separator: "▾", maxSplits: 2, omittingEmptySubsequences: true)
+            let codelabel = codedown[0]
             // print("codeup:")
             //  print(codeup)
             ///  print(codeup[0])
-            countryCodeBt.setTitle("\(codeup[0])▾", for: .normal)
+            countryCodeBt.setTitle("\(codelabel)▾", for: .normal)
             customerName.isUserInteractionEnabled = true
             customerContact.isUserInteractionEnabled = true
             isOpen = false
-            doePickerButton.isHidden = true
+            // doePickerButton.isHidden = true
             picker.isHidden = true
             sendButton.isHidden = false
             
         }
     }
-
     @IBAction func buttonTapped(_ sender: Any) {
         if customerName.text == ""
         {
@@ -114,7 +134,7 @@ class SendInviteViewController: UIViewController, CountryPickerDelegate {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        doePickerButton.isHidden = true
+      //  doePickerButton.isHidden = true
         picker.isHidden = true
         sendButton.isHidden = false
         //customerName.underlined()
@@ -126,7 +146,7 @@ class SendInviteViewController: UIViewController, CountryPickerDelegate {
         
         let location_name = defaultValues.string(forKey: "location_name")
         locationName.text = location_name
-        UITextField.appearance().tintColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0)
+        UITextField.appearance().tintColor = UIColor(red: 38/255, green: 183/255, blue: 91/255, alpha: 1.0)
         //countryCodeBt.layer.borderWidth = 1.0
      //   UITextField.appearance().layer.borderColor = UIColor(red: 96/255, green: 189/255, blue: 106/255, alpha: 1.0).cgColor
         
